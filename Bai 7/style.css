@@ -1,0 +1,86 @@
+body {
+    background-color: black;
+    margin: 0;
+    color: white;
+    font-family: Roboto, Arial, Tahoma;
+}
+
+header {
+    background-color: black;
+    width: 100%;
+    height: 10vh;
+}
+
+.container {
+    margin: auto;
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    background-color: black;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    width: 70%;
+}
+
+li {
+    margin: 20px;
+    font-weight: bold;
+    
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+
+main {
+    width: 70%;
+    background-color: black;
+    height: 1000px;
+    margin: auto;
+}
+
+.nav-title{
+    padding-top: 10px;
+}
+
+.title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.title p{
+    font-size: 25px;
+    font-weight:
+    bold;
+}
+
+.movie{
+    display: flex;
+    overflow: scroll;
+    
+}
+
+.m{
+    margin-right: 15px;
+}
+
+
+.m img{
+    border-radius: 5%;
+}
+
+.movie::-webkit-scrollbar{
+    display: none;
+}
+
+.m1 {
+    margin-top: 10px;
+}
