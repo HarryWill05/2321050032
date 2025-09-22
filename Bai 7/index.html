@@ -4,320 +4,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Bai 7</title>
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <nav>
-                <ul>
-                    <li><img src="./img/logo.png" alt="" style="height: 40px;"></li>
-                    <li class="nav-title"><a href="#">Trang chủ</a></li>
-                    <li class="nav-title"><a href="#">Truyền hình</a></li>
-                    <li class="nav-title"><a href="#">Phim bộ</a></li>
-                    <li class="nav-title"><a href="#">V.League</a></li>
-                    <li class="nav-title"><a href="#">Thiếu nhi</a></li>
-                </ul>
-            </nav>
-            <div class="chucnang">
+    <script src="script.js"></script>
+    <script>
+        //Để viết chú thích js dùng kí tự//
+        document.writeln("hello world" + "<br>"); //Nối chuỗi dùng + //
 
-            </div>
+        let hoTen = "Dao The Huy";
+        document.writeln(hoTen + "<br>");
+        const pi = 3.14; //Hằng số//
+        let soThuNhat = 10;
+        let soThuHai = 5;
+        let ketQua = 0;
+        //+
+        ketQua = soThuNhat + soThuHai;
+        document.writeln(ketQua);
 
-        </div>
-    </header>
-    <main>
-        <div class="banner">
-            <a href="#"><img src="./img/mua-do2-1122.jpeg" alt="" style="width: 100%;"></a>
-        </div>
+        //-
+        ketQua = soThuNhat - soThuHai;
+        document.writeln(ketQua);
 
-        <div class="title">
-            <p>Cày phim hay mỗi ngày</p>
-            <span>
-                <a href="#"> Xem thêm</a>
-            </span>
-        </div>
+        //*
+        ketQua = soThuNhat * soThuHai;
+        document.writeln(ketQua);
 
-        <div class="movie">
-            <div class="m">
-                <a href="#"><img src="./img/350x495-muado.jpg" alt="" style="height: 250px"></a>
-                <div class="m1">
-                    <a href="#">Mưa đỏ</a>
-                </div>
-            </div>
-            <div class="m">
-                <a href="#"><img src="./img/350x495-muado.jpg" alt="" style="height: 250px"></a>
-                <div class="m1">
-                    <a href="#">Mưa đỏ</a>
-                </div>
-            </div>
-            <div class="m">
-                <a href="#"><img src="./img/350x495-muado.jpg" alt="" style="height: 250px"></a>
-                <div class="m1">
-                    <a href="#">Mưa đỏ</a>
-                </div>
-            </div>
-            <div class="m">
-                <a href="#"><img src="./img/350x495-muado.jpg" alt="" style="height: 250px"></a>
-                <div class="m1">
-                    <a href="#">Mưa đỏ</a>
-                </div>
-            </div>
-            <div class="m">
-                <a href="#"><img src="./img/350x495-muado.jpg" alt="" style="height: 250px"></a>
-                <div class="m1">
-                    <a href="#">Mưa đỏ</a>
-                </div>
-            </div>
-            <div class="m">
-                <a href="#"><img src="./img/350x495-muado.jpg" alt="" style="height: 250px"></a>
-                <div class="m1">
-                    <a href="#">Mưa đỏ</a>
-                </div>
-            </div>
-            <div class="m">
-                <a href="#"><img src="./img/350x495-muado.jpg" alt="" style="height: 250px"></a>
-                <div class="m1">
-                    <a href="#">Mưa đỏ</a>
-                </div>
-            </div>
-            <div class="m">
-                <a href="#"><img src="./img/350x495-muado.jpg" alt="" style="height: 250px"></a>
-                <div class="m1">
-                    <a href="#">Mưa đỏ</a>
-                </div>
-            </div>
-            <div class="m">
-                <a href="#"><img src="./img/350x495-muado.jpg" alt="" style="height: 250px"></a>
-                <div class="m1">
-                    <a href="#">Mưa đỏ</a>
-                </div>
-            </div>
-            <div class="m">
-                <a href="#"><img src="./img/350x495-muado.jpg" alt="" style="height: 250px"></a>
-                <div class="m1">
-                    <a href="#">Mưa đỏ</a>
-                </div>
-            </div>
-        </div>
+        // "/"
+        ketQua = soThuNhat / soThuHai;
+        document.writeln(ketQua);
+
+        // %
+        ketQua = soThuNhat % soThuHai;
+        document.writeln(ketQua);
+
+        ketQua = 2;
+        ketQua++;
+        document.writeln(ketQua);
+        ketQua--;
+        document.writeln(ketQua);
+
+        soThuNhat += soThuHai;
+        soThuNhat = 10;
+        soThuNhat = soThuNhat + soThuHai;
+        document.writeln(soThuNhat);
+        soThuNhat = 10;
+        soThuNhat -= soThuHai;
+        document.writeln(soThuNhat + "<br>");
+
+        soThuNhat = 10;
+        soThuHai = "10";
+
+        document.writeln(soThuNhat == soThuHai);
+        document.writeln(soThuNhat === soThuHai);
+        document.writeln(soThuNhat != soThuHai);
+        document.writeln(soThuNhat !== soThuHai);
+        document.writeln(!(soThuNhat !== soThuHai) + "<br>");
+
+        let thongTinSinhVien = {
+            hoTen: "Đào Thế Huy",
+            tuoi: 20,
+            goiTinh: true,
+            lop: "Công nghệ phần mềm k68"
+        }
+
+        document.write("Xin chào " + thongTinSinhVien.hoTen + " đến từ lớp " + thongTinSinhVien.lop + "<br>");
 
 
-        <div class="title">
-            <p>Mới ra mắt</p>
-            <span>
-                <a href="#"> Xem thêm</a>
-            </span>
-        </div>
+        let diaChiTheHuy = {
+            thanhPho: "Hà Nội",
+            quanHuyen: "Đông Anh",
+            duong: "ko biết",
+            soNha: 7
+        }
 
-        <div class="movie">
-            <div class="m">
-                <a href="#"><img src="./img/640x396-muado.jpg" alt="" style="height: 200px"></a>
-                <div class="m1">
-                    <a href="#">Mưa đỏ</a>
-                </div>
-            </div>
-            <div class="m">
-                <a href="#"><img src="./img/640x396-muado.jpg" alt="" style="height: 200px"></a>
-                <div class="m1">
-                    <a href="#">Mưa đỏ</a>
-                </div>
-            </div>
-            <div class="m">
-                <a href="#"><img src="./img/640x396-muado.jpg" alt="" style="height: 200px"></a>
-                <div class="m1">
-                    <a href="#">Mưa đỏ</a>
-                </div>
-            </div>
-            <div class="m">
-                <a href="#"><img src="./img/640x396-muado.jpg" alt="" style="height: 200px"></a>
-                <div class="m1">
-                    <a href="#">Mưa đỏ</a>
-                </div>
-            </div>
-            <div class="m">
-                <a href="#"><img src="./img/640x396-muado.jpg" alt="" style="height: 200px"></a>
-                <div class="m1">
-                    <a href="#">Mưa đỏ</a>
-                </div>
-            </div>
-            <div class="m">
-                <a href="#"><img src="./img/640x396-muado.jpg" alt="" style="height: 200px"></a>
-                <div class="m1">
-                    <a href="#">Mưa đỏ</a>
-                </div>
-            </div>
-            <div class="m">
-                <a href="#"><img src="./img/640x396-muado.jpg" alt="" style="height: 200px"></a>
-                <div class="m1">
-                    <a href="#">Mưa đỏ</a>
-                </div>
-            </div>
-            <div class="m">
-                <a href="#"><img src="./img/640x396-muado.jpg" alt="" style="height: 200px"></a>
-                <div class="m1">
-                    <a href="#">Mưa đỏ</a>
-                </div>
-            </div>
-            <div class="m">
-                <a href="#"><img src="./img/640x396-muado.jpg" alt="" style="height: 200px"></a>
-                <div class="m1">
-                    <a href="#">Mưa đỏ</a>
-                </div>
-            </div>
-            <div class="m">
-                <a href="#"><img src="./img/640x396-muado.jpg" alt="" style="height: 200px"></a>
-                <div class="m1">
-                    <a href="#">Mưa đỏ</a>
-                </div>
-            </div>
-        </div>
+        let namNay = 2025;
 
 
 
-        <div class="title">
-            <p>Phim bộ hot</p>
-            <span>
-                <a href="#"> Xem thêm</a>
-            </span>
-        </div>
+        thongTinSinhVien.diaChi = diaChiTheHuy;
 
-        <div class="movie">
-            <div class="m">
-                <a href="#"><img src="./img/350x495-muado.jpg" alt="" style="height: 250px"></a>
-                <div class="m1">
-                    <a href="#">Mưa đỏ</a>
-                </div>
-            </div>
-            <div class="m">
-                <a href="#"><img src="./img/350x495-muado.jpg" alt="" style="height: 250px"></a>
-                <div class="m1">
-                    <a href="#">Mưa đỏ</a>
-                </div>
-            </div>
-            <div class="m">
-                <a href="#"><img src="./img/350x495-muado.jpg" alt="" style="height: 250px"></a>
-                <div class="m1">
-                    <a href="#">Mưa đỏ</a>
-                </div>
-            </div>
-            <div class="m">
-                <a href="#"><img src="./img/350x495-muado.jpg" alt="" style="height: 250px"></a>
-                <div class="m1">
-                    <a href="#">Mưa đỏ</a>
-                </div>
-            </div>
-            <div class="m">
-                <a href="#"><img src="./img/350x495-muado.jpg" alt="" style="height: 250px"></a>
-                <div class="m1">
-                    <a href="#">Mưa đỏ</a>
-                </div>
-            </div>
-            <div class="m">
-                <a href="#"><img src="./img/350x495-muado.jpg" alt="" style="height: 250px"></a>
-                <div class="m1">
-                    <a href="#">Mưa đỏ</a>
-                </div>
-            </div>
-            <div class="m">
-                <a href="#"><img src="./img/350x495-muado.jpg" alt="" style="height: 250px"></a>
-                <div class="m1">
-                    <a href="#">Mưa đỏ</a>
-                </div>
-            </div>
-            <div class="m">
-                <a href="#"><img src="./img/350x495-muado.jpg" alt="" style="height: 250px"></a>
-                <div class="m1">
-                    <a href="#">Mưa đỏ</a>
-                </div>
-            </div>
-            <div class="m">
-                <a href="#"><img src="./img/350x495-muado.jpg" alt="" style="height: 250px"></a>
-                <div class="m1">
-                    <a href="#">Mưa đỏ</a>
-                </div>
-            </div>
-            <div class="m">
-                <a href="#"><img src="./img/350x495-muado.jpg" alt="" style="height: 250px"></a>
-                <div class="m1">
-                    <a href="#">Mưa đỏ</a>
-                </div>
-            </div>
-
-            <div class="title">
-                <p>Phim lẻ hot</p>
-                <span>
-                    <a href="#"> Xem thêm</a>
-                </span>
-            </div>
-
-            <div class="movie">
-                <div class="m">
-                    <a href="#"><img src="./img/350x495-muado.jpg" alt="" style="height: 250px"></a>
-                    <div class="m1">
-                        <a href="#">Mưa đỏ</a>
-                    </div>
-                </div>
-                <div class="m">
-                    <a href="#"><img src="./img/350x495-muado.jpg" alt="" style="height: 250px"></a>
-                    <div class="m1">
-                        <a href="#">Mưa đỏ</a>
-                    </div>
-                </div>
-                <div class="m">
-                    <a href="#"><img src="./img/350x495-muado.jpg" alt="" style="height: 250px"></a>
-                    <div class="m1">
-                        <a href="#">Mưa đỏ</a>
-                    </div>
-                </div>
-                <div class="m">
-                    <a href="#"><img src="./img/350x495-muado.jpg" alt="" style="height: 250px"></a>
-                    <div class="m1">
-                        <a href="#">Mưa đỏ</a>
-                    </div>
-                </div>
-                <div class="m">
-                    <a href="#"><img src="./img/350x495-muado.jpg" alt="" style="height: 250px"></a>
-                    <div class="m1">
-                        <a href="#">Mưa đỏ</a>
-                    </div>
-                </div>
-                <div class="m">
-                    <a href="#"><img src="./img/350x495-muado.jpg" alt="" style="height: 250px"></a>
-                    <div class="m1">
-                        <a href="#">Mưa đỏ</a>
-                    </div>
-                </div>
-                <div class="m">
-                    <a href="#"><img src="./img/350x495-muado.jpg" alt="" style="height: 250px"></a>
-                    <div class="m1">
-                        <a href="#">Mưa đỏ</a>
-                    </div>
-                </div>
-                <div class="m">
-                    <a href="#"><img src="./img/350x495-muado.jpg" alt="" style="height: 250px"></a>
-                    <div class="m1">
-                        <a href="#">Mưa đỏ</a>
-                    </div>
-                </div>
-                <div class="m">
-                    <a href="#"><img src="./img/350x495-muado.jpg" alt="" style="height: 250px"></a>
-                    <div class="m1">
-                        <a href="#">Mưa đỏ</a>
-                    </div>
-                </div>
-                <div class="m">
-                    <a href="#"><img src="./img/350x495-muado.jpg" alt="" style="height: 250px"></a>
-                    <div class="m1">
-                        <a href="#">Mưa đỏ</a>
-                    </div>
-                </div>
+        document.write("Xin chào " + thongTinSinhVien.hoTen + " đến từ lớp " + thongTinSinhVien.lop + " số nhà: "
+            + thongTinSinhVien.diaChi.soNha + " Đường: " + thongTinSinhVien.diaChi.duong + " Huyện: " + thongTinSinhVien.diaChi.quanHuyen
+            + " Sinh năm: " + (namNay - thongTinSinhVien.tuoi) + "<br>");
 
 
-    </main>
-    <footer>
 
-    </footer>
+
+        soThuHai = "9.5";
+        soThuHai = parseInt(soThuHai);
+        document.writeln(typeof (soThuHai));
+        soThuHai = parseInt(soThuHai);
+        document.writeln(soThuHai);
+        soThuHai = "9.5";
+        soThuHai = parseFloat(soThuHai);
+        document.writeln(soThuHai);
+
+    </script>
 </body>
 
 </html>

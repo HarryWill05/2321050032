@@ -1,0 +1,1 @@
+document.writeln("Xin Chào! <br>");

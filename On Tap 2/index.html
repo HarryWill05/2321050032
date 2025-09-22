@@ -6,22 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 
 <body>
     <main>
         <div class="container">
-            <div class="m1">
-                <div>
-                    <img src="./pic/image.png" alt="" style="height: 200px;">
+            <div class="container-main">
+                <div class="m1">
+                    <div>
+                        <img src="./pic/image.png" alt="" style="height: 400px;">
+                    </div>
                 </div>
-                <div>
-                    <a href="#">Create an account</a>
+                <div class="m2">
+                    <h1>Log In</h1>
+                    <div class="email">
+                        <i class="fa-solid fa-user"></i> <input type="text" placeholder="Your User Name">
+                    </div>
+                    <div class="email">
+                        <i class="fa-solid fa-lock"></i> <input type="text" placeholder="Password">
+                    </div>
+                    <div style="display: flex;">
+                        <input type="checkbox"> <div style="font-size: 12px; margin-left: 5px;">Remember me</div>
+                    </div>
+
+                    <div class="log-in">
+                        <a href="#">Log In</a>
+                    </div>
                 </div>
-                
             </div>
-            <div>
-                <h1>Log In</h1>
+            <div class="container-foot">
+                <div class="create-acc">
+                    <a href="#" style="font-size: 13px; color: black;">Create an account</a>
+                </div>
+                <div class="log-with">
+                    <span style="font-size: 13px; align-content: center;">
+                        Or login with 
+                    </span>
+                    <div class="icon">
+                        <a href="#"><i class="fa-brands fa-square-facebook" style="color: rgb(0, 115, 255) "></i></a> <a href="#"><i class="fa-brands fa-square-twitter" style="color:deepskyblue"></i></a> <a href="#"><i class="fa-brands fa-google" style="color:#fff; background-color: red; border-radius: 2px; padding: 3px; font-size: 20px; height: 20px;"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
 

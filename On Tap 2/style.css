@@ -1,10 +1,97 @@
-main{
-    width: 50%;
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(240, 240, 240);
+}
+
+main {
+    width: 60%;
     margin: auto;
+    height: 97vh;
+    align-content: center;
+
 
 }
 
-.container{
-    background-color: rgb(221, 219, 219);
+.container {
+    background-color: #fff;
+    height: 90%;
+    border-radius: 15px;
+    align-content: center;
+
+}
+
+
+.container-main {
+    display: flex;
+    height: 80%;
+    width: 100%;
+}
+
+h1 {
+    margin: 0;
+    font-weight: 800;
+}
+
+.m1{
+    width: 50%;
+}
+
+.m2{
+    width: 50%;
+}
+
+.email{
+    margin: 30px 0;
+}
+
+.email input[type="text"]{
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgb(93, 93, 93);
+    width: 80%;
+    
+}
+
+input[type="checkbox"]{
+    margin: 0;
+}
+
+
+.log-in a{
+    color: #fff;
+    text-decoration: none;
+    background-color: rgb(42, 150, 186);
+    width: 20%;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.container-foot{
+    display:flex;
+}
+
+.container-foot div{
+    width: 50%;
     display: flex;
 }
+
+.create-acc{
+    justify-content: center;
+}
+
+
+.log-with i{
+ margin-left: 10px;
+}
+
+.icon{
+    text-align: left;
+}
+
+.icon i{
+    font-size: 30px;
+}
+

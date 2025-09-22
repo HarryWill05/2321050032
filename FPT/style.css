@@ -1,0 +1,173 @@
+body {
+    background-color: black;
+    margin: 0;
+    color: white;
+    font-family: 'SF Pro Display', sans-serif;
+    zoom: 0.9;
+}
+
+header {
+    background-color: black;
+    width: 100%;
+    height: 10vh;
+}
+
+.container {
+    margin: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container ul {
+    width: 100%;
+}
+
+.chucnang {
+    display: flex;
+    align-items: center;
+}
+
+.chucnang li {
+    margin-left: 10px;
+}
+
+.credit-card a {
+    padding: 10px 15px;
+    background-color: rgb(255, 81, 0);
+    border-radius: 25px;
+}
+
+.credit-card a:hover {
+    filter: brightness(125%);
+    color: #fff;
+}
+
+
+ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    width: 70%;
+}
+
+li {
+    margin: 20px;
+    font-weight: bold;
+
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+
+main {
+    width: 80%;
+    background-color: black;
+    margin: auto;
+    border-bottom: 1px solid gray;
+}
+
+.nav-title {
+    padding-top: 10px;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title p {
+    font-size: 25px;
+    font-weight:
+        bold;
+}
+
+.movie {
+    display: flex;
+    overflow: scroll;
+
+}
+
+.m {
+    margin-right: 15px;
+}
+
+
+.m img {
+    border-radius: 5%;
+}
+
+.movie::-webkit-scrollbar {
+    display: none;
+}
+
+.m1 {
+    margin-top: 10px;
+}
+
+.title span {
+    font-size: 14px;
+}
+
+.footer-top {
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+
+}
+
+.footer-top ul {
+    display: block;
+    margin: 0;
+}
+
+.footer-top li {
+    margin: 0;
+    font-size: 14px;
+    margin: 8px 0;
+    font-weight: 500;
+}
+
+.footer-top p {
+    font-weight: 100;
+    font-size: 15px;
+    color: rgb(209, 209, 209);
+}
+
+.ft1 {
+    width: 33.33333%;
+}
+
+li a:hover {
+    color: orange;
+}
+
+.social a {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.ft2 {
+    width: 80%;
+    margin: auto;
+    padding: 50px;
+}
+
+.ft2 {
+    font-size: 13px;
+}
