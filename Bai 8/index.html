@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 8</title>
+</head>
+
+<body>
+    <script>
+        let thongTinBanHang = {
+            maDonHang: "1A",
+            trangThaiThanhToan: true,
+            diaChi: "Hà Nội",
+            hoTen: "Đào Thế Huy",
+            soDienThoai: "0867801860",
+            trangThaiTVTT: true,
+            sanPham: {
+                sp1: {
+                    maSP: "caphe",
+                    tenSP: "Cà Phê",
+                    soLuong: 5,
+                    gia: 20000
+                },
+
+                sp2: {
+                    maSP: "matcha",
+                    tenSP: "Matcha",
+                    soLuong: 6,
+                    gia: 50000
+                },
+
+                sp3: {
+                    maSP: "trasua",
+                    tenSP: "Trà Sữa",
+                    soLuong: 8,
+                    gia: 30000
+                }
+            }
+
+        }
+
+
+
+        tongGiaSP1 = thongTinBanHang.sanPham.sp1.soLuong * thongTinBanHang.sanPham.sp1.gia;
+        tongGiaSP2 = thongTinBanHang.sanPham.sp2.soLuong * thongTinBanHang.sanPham.sp2.gia;
+        tongGiaSP3 = thongTinBanHang.sanPham.sp3.soLuong * thongTinBanHang.sanPham.sp3.gia;
+
+        tongGiaSP = tongGiaSP1 + tongGiaSP2 + tongGiaSP3;
+
+
+        document.writeln("Tổng tiền sản phẩm: " + tongGiaSP + " Đồng <br>");
+
+
+        //STRING
+        let hoTen = " Đào Thế Huy";
+        document.writeln(hoTen.length + "<br>");
+        let myString= "Hello Huy";
+        document.writeln(myString[4]);
+        document.writeln(myString.slice(1,4));
+        document.writeln(myString.replace(" ", "Hi"));
+        document.writeln(myString.toLowerCase());
+        //indexOf kí tự tìm kiếm có: Vị trí, không: -1
+        document.writeln(myString.indexOf("i"));
+        //include kiểm tra có hay không True/False
+        document.writeln(myString.includes("y"));
+        
+        
+        //Tách chuỗi thành Mảng split
+        document.writeln(myString.split(""));
+        document.writeln(myString.split(" "));
+        document.writeln(myString.split("u"));
+
+        document.writeln(myString.startsWith("Hello"));
+
+        //toFix định dạng số thập phân
+        let pi = 3.14159;
+        document.writeln(pi.toFixed(2));
+        //is not a number
+        document.writeln(isNaN("10")); // Nhớ trả lời buổi sau
+
+        let toDay = new Date();
+        document.writeln(toDay);
+        
+        //Lấy ra tháng năm
+        document.writeln(toDay.getFullYear());
+        document.writeln(toDay.getMonth());
+        document.writeln(toDay.getDate());
+        document.writeln(toDay.getDay());
+        document.writeln(toDay.getHours());
+        document.writeln(toDay.getMinutes());
+        document.writeln(toDay.getSeconds());
+
+
+
+    </script>
+</body>
+
+</html>
