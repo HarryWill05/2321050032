@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bai 9</title>
 </head>
+
 <body>
     <script>
         //Mảng
         let arr = [1, 2, 3, 4, 'a', 'b', 'c', 2, 3];
-        
-        document.writeln(typeof(arr));
+
+        document.writeln(typeof (arr));
         // Kiểm tra có phải dạng mảng không
         document.writeln(Array.isArray(arr));
         //Kiểm tra độ dài mảng
@@ -49,43 +51,49 @@
         d.shift();
         document.writeln(d + '<br>');
 
-        let so = 10000000000000000000001;
+        let so = "10000000000000000000001";
         let soCuoi = parseInt(so[so.length - 1]);
 
-        if(soCuoi % 2 == 0){
+        if (soCuoi % 2 == 0) {
             document.writeln(so + " là số chẵn");
-        }else{
+        } else {
             document.writeln(so + " là số lẻ");
         }
 
 
         let now = new Date().getHours();
 
-        if(now >= 5 && now < 10){
+        if (now >= 5 && now < 10) {
             document.writeln("Chào buổi sáng");
-        }else if(now >= 10 && now < 13){
+        } else if (now >= 10 && now < 13) {
             document.writeln("Chào buổi trưa");
-        }else if(now >= 13 && now < 17){
+        } else if (now >= 13 && now < 17) {
             document.writeln("Chào buổi chiều");
-        }else{
+        } else {
             document.writeln("Chào buổi tối");
         };
 
-        a = 8;
-        b = 9;
-        c = 10;
+        document.writeln("<br>")
 
-        let tong = a*(0.6) + b*(0.3) + c*(0.1);
-        if(tong>= 8 && tong <= 10){
-            document.writeln("A");
-        }else if(tong>= 7 && tong < 8){
-            document.writeln("B");
-        }else if(tong >= 5 && tong < 7){
-            document.writeln("C");
-        }else if(tong >= 4 && tong < 5){
-            document.writeln("D");
-        }else{
-            document.writeln("F");
+        a = 20;
+        b = 30;
+        c = -5;
+
+        if (a < 0 || a > 10 || b < 0 || b > 10 || c < 0 || c > 10) {
+            document.writeln("Điểm không hợp lệ");
+        } else {
+            let tong = a * (0.6) + b * (0.3) + c * (0.1);
+            if (tong >= 8 && tong <= 10) {
+                document.writeln("A");
+            } else if (tong >= 7 && tong < 8) {
+                document.writeln("B");
+            } else if (tong >= 5 && tong < 7) {
+                document.writeln("C");
+            } else if (tong >= 4 && tong < 5) {
+                document.writeln("D");
+            } else {
+                document.writeln("F");
+            }
         }
 
 
@@ -93,6 +101,13 @@
 
 
 
+
+
+
+
+
+
     </script>
 </body>
+
 </html>
