@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 11</title>
+</head>
+
+<body>
+    <h1>Tính tổng</h1>
+    <div>
+        Nhập điểm A:
+        <input type="number" id="A">
+    </div>
+    <div>
+        Nhập điểm B:
+        <input type="number" id="B">
+    </div>
+    <div>
+        Nhập điểm C:
+        <input type="number" id="C">
+    </div>
+    <div>
+        <button onclick="tinhTong()">Tính điểm</button>
+    </div>
+    <div>
+        Kết quả: <input type="text" id="ketQua" class="ket-qua">
+    </div>
+    
+
+    <script>
+        function tinhTong(){
+            let a = Number(document.getElementById('A').value);
+            let b = Number(document.getElementById('B').value);
+            let c = Number(document.getElementById('C').value);
+            let canhBao = "";
+
+            if(!a){
+                canhBao += "Vui lòng nhập vào điểm A";
+            }
+
+            if(!b){
+                canhBao += "Vui lòng nhập vào điểm B";
+            }
+
+            if(!c){
+                canhBao += "Vui lòng nhập vào điểm C";
+            }
+
+            if(canhBao){
+                alert(canhBao);
+            }
+            let tong = c*(0.1) + b*(0.3) + a*(0.6);
+            let diemChu = "";
+            if(tong >= 9 && tong <= 10){
+                diemChu = "A+";
+            }
+            else if(tong >= 8.5 && tong < 9){
+                diemChu = "A";
+            }
+            else if(tong >= 8.0 && tong < 8.5){
+                diemChu = "B+";
+            }
+            else if(tong >= 7.0 && tong < 8.0){
+                diemChu = "B";
+            }
+            else if(tong >= 6.5 && tong < 7.0){
+                diemChu = "C+";
+            }
+            else if(tong >= 5.5 && tong < 6.5){
+                diemChu = "C";
+            }
+            else if(tong >= 5.0 && tong < 5.5){
+                diemChu = "D+";
+            }
+            else if(tong >= 4.0 && tong < 5.0){
+                diemChu = "D";
+            }
+            else {
+                diemChu = "F";
+            }
+
+            document.getElementById('ketQua').value = diemChu;
+
+            
+        }
+    </script>
+</body>
+
+</html>
