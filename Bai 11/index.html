@@ -22,69 +22,62 @@
         <input type="number" id="C">
     </div>
     <div>
-        <button onclick="tinhTong()">Tính điểm</button>
+        <button onclick="tinhToan()">Tính điểm</button>
     </div>
     <div>
         Kết quả: <input type="text" id="ketQua" class="ket-qua">
     </div>
-    
+
+    <div>
+        ----------------------------------------------------------
+    </div>
+    <div>
+        Nhập số thứ nhất:
+        <input type="number" id="soThuNhat">
+    </div>
+    <div>
+        Nhập số thứ hai:
+        <input type="number" id="soThuHai">
+    </div>
+    <div>
+        <button onclick="tinhToan('cong')">Tính tổng</button>
+        <button onclick="tinhToan('tru')">Tính hiệu</button>
+        <button onclick="tinhToan('nhan')">Tính tích</button>
+        <button onclick="tinhToan('chia')">Tính thương</button>
+    </div>
+    <div>
+        Kết quả: <input type="text" id="ketQua2" class="ket-qua-2">
+    </div>
+
 
     <script>
-        function tinhTong(){
-            let a = Number(document.getElementById('A').value);
-            let b = Number(document.getElementById('B').value);
-            let c = Number(document.getElementById('C').value);
-            let canhBao = "";
-
-            if(!a){
-                canhBao += "Vui lòng nhập vào điểm A";
-            }
-
-            if(!b){
-                canhBao += "Vui lòng nhập vào điểm B";
-            }
-
-            if(!c){
-                canhBao += "Vui lòng nhập vào điểm C";
-            }
-
-            if(canhBao){
-                alert(canhBao);
-            }
-            let tong = c*(0.1) + b*(0.3) + a*(0.6);
-            let diemChu = "";
-            if(tong >= 9 && tong <= 10){
-                diemChu = "A+";
-            }
-            else if(tong >= 8.5 && tong < 9){
-                diemChu = "A";
-            }
-            else if(tong >= 8.0 && tong < 8.5){
-                diemChu = "B+";
-            }
-            else if(tong >= 7.0 && tong < 8.0){
-                diemChu = "B";
-            }
-            else if(tong >= 6.5 && tong < 7.0){
-                diemChu = "C+";
-            }
-            else if(tong >= 5.5 && tong < 6.5){
-                diemChu = "C";
-            }
-            else if(tong >= 5.0 && tong < 5.5){
-                diemChu = "D+";
-            }
-            else if(tong >= 4.0 && tong < 5.0){
-                diemChu = "D";
-            }
-            else {
-                diemChu = "F";
-            }
-
-            document.getElementById('ketQua').value = diemChu;
-
+        function tinhToan(phepTinh) {
             
+            let so1 = Number(document.getElementById('soThuNhat').value);
+            let so2 = Number(document.getElementById('soThuHai').value);
+
+            if(phepTinh == 'cong'){
+                kq = so1 + so2
+            }
+
+            if(phepTinh == 'tru'){
+                kq = so1 - so2
+            }
+
+            if(phepTinh == 'nhan'){
+                kq = so1 * so2
+            }
+
+            if(phepTinh == 'chia'){
+                kq = so1 / so2
+            }
+
+            document.getElementById('ketQua2').value = kq;
         }
+
+
+
+
     </script>
 </body>
 

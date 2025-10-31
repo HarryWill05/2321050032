@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1>Tính chỉ số BMI</h1>
+        </div>
+        <div class="c">
+            <div class = "c1">
+                <div>
+                    Nhập cân nặng:
+                    <input type="number" id="canNang">
+                </div>
+                <div>
+                    Nhập chiều cao:
+                    <input type="number" id="chieuCao">
+                </div>
+                <div>
+                    <button onclick="tinhBMI()">Tính BMI</button>
+                </div>
+                <div>
+                    Kết quả:
+                    <input type="number" id="ketQua">
+                </div>
+            </div>
+            <div class="c2">
+                <img src="" alt="" style="height: 200px;">
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function tinhBMI(){
+            let canNang = Number(document.getElementById('canNang').value);
+            let chieuCao = Number(document.getElementById('chieuCao').value);
+            let check = "";
+
+            if(canNang < 0 || !canNang){
+                check += "\n Vui lòng nhập lại cân nặng \n"
+            }
+
+            if(chieuCao < 0 || !chieuCao){
+                check += "Vui lòng nhập lại chiều cao \n"
+            }
+
+            if(check){
+                alert(check);
+            }
+
+
+            let bmi = canNang / (chieuCao * chieuCao);
+
+            document.getElementById('ketQua').value = bmi;
+
+            if(bmi < 18.5){
+                document.getElementsByTagName('img')[0].src = './pic/thieuCan.jpg';
+            }
+            
+            if(bmi > 18.5 && bmi <= 24.9){
+                document.getElementsByTagName('img')[0].src = './pic/binhThuong.jpg';
+            }
+
+            if(bmi > 24.9 && bmi <= 29.9){
+                document.getElementsByTagName('img')[0].src = './pic/thuaCan.jpg';
+            }
+
+            if(bmi > 29.9 && bmi <= 39.9){
+                document.getElementsByTagName('img')[0].src = './pic/beoPhi1-2.jpg';
+            }
+
+            if(bmi >= 40){
+                document.getElementsByTagName('img')[0].src = './pic/beoPhi.jpg';
+            }
+            
+
+
+        }
+    </script>
+</body>
+</html>
