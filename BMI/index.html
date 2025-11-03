@@ -4,6 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMI</title>
+
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            box-sizing: border-box;
+            background: #f0f2f5;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 820px;
+            padding: 24px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 6px 18px rgba(51, 51, 51, 0.08);
+        }
+        
+        .c{
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+        .c1{
+            height: 300px;
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+        }
+
+        .c1 div{
+            margin-top: 15px;
+        }
+
+        .c2{
+            width: 200px;
+        }
+
+        .c2 img{
+            height: 300px;
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid rgb(200, 200, 200);
+        }
+
+        .c1 input[type ="number"]{
+            border-radius: 10px;
+            border: 1px solid rgb(53, 53, 53);
+            padding: 3px;
+        }
+
+        .c1 button{
+            border-radius: 10px;
+            padding: 10px;
+            background-color: #fff;
+            color: rgb(0, 132, 255);
+            border: 1px solid gray;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 120ms ease, background-color 120ms ease, color 120ms ease;
+        }
+
+        .c1 button:hover{
+            background-color: rgb(0, 132, 255);
+            color: #fff;
+            transform: scale(1.1);
+            
+            
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -29,7 +106,7 @@
                 </div>
             </div>
             <div class="c2">
-                <img src="" alt="" style="height: 200px;">
+                <img src="https://i.pinimg.com/736x/f5/05/24/f50524ee5f161f437400aaf215c9e12f--plain-white-background-cristina.jpg" alt="" style="height: 300px;">
             </div>
         </div>
     </div>
@@ -42,7 +119,7 @@
             let check = "";
 
             if(canNang < 0 || !canNang){
-                check += "\n Vui lòng nhập lại cân nặng \n"
+                check += "\nVui lòng nhập lại cân nặng \n"
             }
 
             if(chieuCao < 0 || !chieuCao){
@@ -51,12 +128,13 @@
 
             if(check){
                 alert(check);
+                return;
             }
-
+            
 
             let bmi = canNang / (chieuCao * chieuCao);
 
-            document.getElementById('ketQua').value = bmi;
+            document.getElementById('ketQua').value = bmi.toFixed(2);
 
             if(bmi < 18.5){
                 document.getElementsByTagName('img')[0].src = './pic/thieuCan.jpg';
