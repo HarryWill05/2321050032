@@ -35,18 +35,42 @@ header {
 
 .xem-phim{
     margin-top: 20px;
+    display: flex;
+    gap: 20px;
 }
 
 .xem-phim a {
     background-color: rgb(255, 81, 0);
     color: #fff;
-    padding: 10px;
-    border-radius: 10px;
-
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    display: inline-block;
 }
 
+.xem-phim a i {
+    margin-right: 8px;
+}
 
+.xem-phim a:hover{
+    filter: brightness(120%);
+    transform: scale(1.1);
+}
 
+.xem-phim button{
+    border-radius: 100%;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #ffffff47;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.xem-phim button:hover{
+    background-color: #ffffff84;
+
+}
 
 .banner {
     background-image: url('./img/mua-do2-1122.jpeg');
@@ -57,7 +81,6 @@ header {
 }
 
 .tieu-de-banner {
-    position: absolute;
     bottom: 50px;
     left: 50px;
     color: white;
@@ -81,6 +104,8 @@ header {
     align-items: center;
     gap: 5px;
 }
+
+
 
 .container {
     margin: auto;
@@ -117,6 +142,7 @@ header {
 .credit-card a:hover {
     filter: brightness(125%);
     color: #fff;
+    
 }
 
 
