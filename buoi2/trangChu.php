@@ -7,20 +7,11 @@
 </head>
 <body>
     
-    <?php
-    session_start();
-    if(!isset($_SESSION["username"])){
-        header("location: login.php");
-    }
     
-    
-    ?>
+
     <h1>Trang Chủ</h1>
-    <?php 
-    echo "Xin chào ".$_SESSION["username"]."";
+
     
-    
-    ?>
 
 </body>
 </html>
