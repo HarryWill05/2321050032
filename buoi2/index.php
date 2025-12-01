@@ -41,7 +41,7 @@
         }
         main{
             width: 95%;
-            margin: 50px auto;
+            margin: 80px auto;
         }
     </style>
 </head>
@@ -89,6 +89,12 @@
                     break;
                 case 'nguoidung':
                     include "nguoidung.php";
+                    break;
+                case 'themnguoidung':
+                    include 'themnguoidung.php';
+                    break;
+                case 'capnhatnguoidung':
+                    include 'capnhatnguoidung.php';
                     break;
                 case 'dangxuat':
                     break;
