@@ -12,6 +12,17 @@
             justify-content: center;
             align-items: center;
         }
+
+        .warning {
+            color: red;
+            display: flex;
+            justify-content: center;
+        }
+
+        form div{
+            width: 65%;
+            margin: auto;
+        }
     </style>
 </head>
 
@@ -22,6 +33,7 @@
     <div class="container">
         <form action="index.php?page_layout=themnguoidung" method="post">
             <h1>Thêm người dùng</h1>
+
             <div>
                 <input type="text" name="ten-dang-nhap" placeholder="Tên đăng nhập">
             </div>
@@ -51,6 +63,8 @@
             <div class="box">
                 <input type="submit" value="Thêm mới">
             </div>
+
+
         </form>
     </div>
     <?php
@@ -75,8 +89,8 @@
         $result = mysqli_query($conn, $sql);
         header('location: index.php?page_layout=nguoidung');
 
-    }else{
-        echo "Vui lòng nhập đầy đủ thông tin";
+    } else {
+        echo "<p class= 'warning'> Vui lòng nhập đầy đủ thông tin ! </p>";
     }
 
 

@@ -15,7 +15,7 @@
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             margin: 0;
             padding: 0;
-            
+
         }
 
         ul {
@@ -39,7 +39,8 @@
             left: 0;
             right: 0;
         }
-        main{
+
+        main {
             width: 95%;
             margin: 80px auto;
         }
@@ -67,11 +68,11 @@
                 <li><a href="index.php?page_layout=dangxuat">Đăng xuất</a></li>
             </ul>
         </nav>
-        
+
 
     </header>
     <main>
-        
+
         <?php
         if (isset($_GET['page_layout'])) {
             switch ($_GET['page_layout']) {
@@ -96,9 +97,29 @@
                 case 'capnhatnguoidung':
                     include 'capnhatnguoidung.php';
                     break;
+                case 'themphim':
+                    include 'themphim.php';
+                    break;
+                case 'capnhatphim':
+                    include 'capnhatphim.php';
+                    break;
+                case 'themtheloai':
+                    include 'themtheloai.php';
+                    break;
+                case 'capnhattheloai':
+                    include 'capnhattheloai.php';
+                    break;
+                case 'themquocgia':
+                    include 'themquocgia.php';
+                    break;
+                case 'capnhatquocgia':
+                    include 'capnhatquocgia.php';
+                    break;
                 case 'dangxuat':
                     break;
             }
+        } else {
+            include 'trangchu.php';
         }
 
 

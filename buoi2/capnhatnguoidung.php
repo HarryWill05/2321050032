@@ -12,6 +12,17 @@
             justify-content: center;
             align-items: center;
         }
+
+        .warning {
+            color: red;
+            display: flex;
+            justify-content: center;
+        }
+
+        form div{
+            width: 65%;
+            margin: auto;
+        }
     </style>
 </head>
 
@@ -27,10 +38,12 @@
         <form action="index.php?page_layout=capnhatnguoidung&id=<?php echo $nguoiDung["id"] ?>" method="post">
             <h1>Cập nhật người dùng</h1>
             <div>
-                <input type="text" name="ten-dang-nhap" placeholder="Tên đăng nhập" value="<?php echo $nguoiDung['ten_dang_nhap'] ?>">
+                <input type="text" name="ten-dang-nhap" placeholder="Tên đăng nhập"
+                    value="<?php echo $nguoiDung['ten_dang_nhap'] ?>">
             </div>
             <div>
-                <input type="password" name="password" placeholder="Mật khẩu" value="<?php echo $nguoiDung['mat_khau'] ?>">
+                <input type="password" name="password" placeholder="Mật khẩu"
+                    value="<?php echo $nguoiDung['mat_khau'] ?>">
             </div>
             <div>
                 <input type="text" name="ho-ten" placeholder="Họ tên" value="<?php echo $nguoiDung['ho_ten'] ?>">
@@ -39,7 +52,8 @@
                 <input type="email" name="email" placeholder="Email" value="<?php echo $nguoiDung['email'] ?>">
             </div>
             <div>
-                <input type="text" name="so-dien-thoai" placeholder="Số điện thoại" value="<?php echo $nguoiDung['sdt'] ?>">
+                <input type="text" name="so-dien-thoai" placeholder="Số điện thoại"
+                    value="<?php echo $nguoiDung['sdt'] ?>">
             </div>
             <div>
                 <select id="vai-tro" name="vai-tro">
@@ -50,7 +64,8 @@
                 </select>
             </div>
             <div>
-                <input type="date" name="ngay-sinh" placeholder="Ngày sinh" value="<?php echo $nguoiDung['ngay_sinh'] ?>">
+                <input type="date" name="ngay-sinh" placeholder="Ngày sinh"
+                    value="<?php echo $nguoiDung['ngay_sinh'] ?>">
             </div>
             <div class="box">
                 <input type="submit" value="Cập nhật">
@@ -79,8 +94,8 @@
         $result = mysqli_query($conn, $sql);
         header('location: index.php?page_layout=nguoidung');
 
-    }else{
-        echo "Vui lòng nhập đầy đủ thông tin";
+    } else {
+        echo "<p class= 'warning'> Vui lòng nhập đầy đủ thông tin ! </p>";
     }
 
 

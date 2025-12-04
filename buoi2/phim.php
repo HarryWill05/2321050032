@@ -12,12 +12,45 @@
 
         .xoa {
             background-color: red;
+            padding: 0 10px;
+            color: #fff;
+        }
+
+        td {
+            padding: 10px;
+        }
+
+        .chuc-nang {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .sua {
+            color: black;
+
+        }
+
+        .btn {
+            border-radius: 3px;
+            border: 1px solid gray;
+            padding: 5px;
+        }
+
+        .them {
+            color: black;
+            padding: 10px;
         }
     </style>
 </head>
 
 <body>
-    <h1>Thông tin phim</h1>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <h1>Thông tin phim</h1>
+        <div>
+            <a class="btn them" href="index.php?page_layout=themphim">Thêm phim</a>
+        </div>
+    </div>
 
     <table border=1>
         <tr>
@@ -45,9 +78,9 @@
                 <td><?php echo $row["so_tap"] ?></td>
                 <td><?php echo $row["trailer"] ?></td>
                 <td><?php echo $row["mo_ta"] ?></td>
-                <td>
-                    <button>Sửa</button>
-                    <a class="xoa" href="index.php?id=<?php echo $row["id"] ?>">Xóa</a>
+                <td class="chuc-nang">
+                    <a class="btn sua" href="index.php?page_layout=capnhatphim&id=<?php echo $row["id"] ?>">Cập nhật</a>
+                    <a class="btn xoa" href="xoaphim.php?id=<?php echo $row["id"] ?>">Xóa</a>
                 </td>
             </tr>
         <?php } ?>
