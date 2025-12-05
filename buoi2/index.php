@@ -44,6 +44,8 @@
             width: 95%;
             margin: 80px auto;
         }
+
+        
     </style>
 </head>
 
@@ -62,6 +64,7 @@
                 <li><a href="index.php?page_layout=theloai">Thể loại</a></li>
                 <li><a href="index.php?page_layout=quocgia">Quốc gia</a></li>
                 <li><a href="index.php?page_layout=nguoidung">Người dùng</a></li>
+                <li><a href="index.php?page_layout=phimtheloai">Phim thể loại</a></li>
             </ul>
             <ul>
                 <li><?php echo "Xin chào " . $_SESSION["username"]; ?></li>
@@ -90,6 +93,9 @@
                     break;
                 case 'nguoidung':
                     include "nguoidung.php";
+                    break;
+                case 'phimtheloai':
+                    include "phimtheloai.php";
                     break;
                 case 'themnguoidung':
                     include 'themnguoidung.php';
