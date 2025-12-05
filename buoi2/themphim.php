@@ -57,7 +57,6 @@
                 <input type="text" name="poster" placeholder="Poster">
             </div>
             <div>
-                
                 <select id="quoc-gia" name="quoc-gia">
                     <?php
                         $sql = "SELECT * FROM `quoc_gia`";

@@ -48,7 +48,7 @@
     <div style="display: flex; justify-content: space-between; align-items: center;">
         <h1>Thông tin phim thể loại</h1>
         <div>
-            <a class="btn them" href="index.php?page_layout=themtheloai">Thêm phim thể loại</a>
+            <a class="btn them" href="index.php?page_layout=themphimtheloai">Thêm phim thể loại</a>
         </div>
     </div>
     <table border=1>
@@ -70,10 +70,9 @@
                 <td><?php echo $row["ten_the_loai"] ?></td>
 
                 <td class="chuc-nang">
-                    <a class="btn sua"
-                        href="index.php?page_layout=capnhattheloai&id=<?php echo $row["id"] ?>&ten_the_loai=<?php echo $row["ten_the_loai"] ?>">Cập
+                    <a class="btn sua" href="index.php?page_layout=capnhatphimtheloai&id=<?php echo $row["id"] ?>">Cập
                         nhật</a>
-                    <a class="btn xoa" href="xoatheloai.php?id=<?php echo $row["id"] ?>">Xóa</a>
+                    <a class="btn xoa" href="xoaphimtheloai.php?id=<?php echo $row["id"] ?>">Xóa</a>
                 </td>
             </tr>
         <?php } ?>

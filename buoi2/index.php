@@ -44,8 +44,6 @@
             width: 95%;
             margin: 80px auto;
         }
-
-        
     </style>
 </head>
 
@@ -120,6 +118,12 @@
                     break;
                 case 'capnhatquocgia':
                     include 'capnhatquocgia.php';
+                    break;
+                case 'themphimtheloai':
+                    include 'themphimtheloai.php';
+                    break;
+                case 'capnhatphimtheloai':
+                    include 'capnhatphimtheloai.php';
                     break;
                 case 'dangxuat':
                     break;
