@@ -58,7 +58,7 @@
                 </select>
             </div>
             <div>
-                <input type="datetime" name="ngay-sinh" placeholder="Ngày sinh">
+                <input type="date" name="ngay-sinh" placeholder="Ngày sinh">
             </div>
             <div class="box">
                 <input type="submit" value="Thêm mới">

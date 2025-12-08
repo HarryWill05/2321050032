@@ -73,7 +73,9 @@
                 <td><?php echo $row["ten_phim"] ?></td>
                 <td><?php echo $row["ho_ten"] ?></td>
                 <td><?php echo $row["nam_phat_hanh"] ?></td>
-                <td><?php echo $row["poster"] ?></td>
+                <td>
+                    <img src="<?php echo $row["poster"] ?>" alt="" style="height: 200px;">
+                </td>
                 <td><?php echo $row["ten_quoc_gia"] ?></td>
                 <td><?php echo $row["so_tap"] ?></td>
                 <td><?php echo $row["trailer"] ?></td>

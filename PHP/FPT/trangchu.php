@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPT Play</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" />
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#"><img src="./img/logo.png" alt="" style="height: 40px;"></a></li>
+                    <li class="nav-title"><a href="#">Trang chủ</a></li>
+                    <li class="nav-title"><a href="#">Truyền hình</a></li>
+                    <li class="nav-title"><a href="#">Phim bộ</a></li>
+                    <li class="nav-title"><a href="#">V.League</a></li>
+                    <li class="nav-title"><a href="#">Thiếu nhi</a></li>
+                </ul>
+            </nav>
+            <div class="chucnang">
+                <ul>
+                    <li>
+                        <a href="#"><i class="fa-solid fa-magnifying-glass" style="font-size: 18px;"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-regular fa-bell" style="font-size: 20px;"></i></a>
+                    </li>
+                    <li><a href="#"><i class="fa-solid fa-mobile-screen-button"></i></a></li>
+                    <li class="credit-card">
+                        <a href="#"><i class="fa-solid fa-credit-card"></i> Mua gói</a>
+                    </li>
+                    <li>
+                        <a href="#">Đăng Nhập</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </header>
+    <main>
+        <div class="banner">
+            <div class="tieu-de-banner">
+                <div class="ten-phim" id="tenPhim">Mưa Đỏ</div>
+                <div class="thong-tin-phim">
+                    <span>• <span id="namPhatHanh">2025</span></span>
+                    <span>• <span id="thoiLuong">2</span> giờ</span>
+                    <span>• T<span id="tuoi">16</span></span>
+                    <span>• <span id="quocGia">Việt Nam</span></span>
+                </div>
+                <div class="xem-phim">
+                    <a href="#"><i class="fa-solid fa-play"></i> Xem Ngay </a>
+                    <div>
+                        <button><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div>
+                        <button><i class="fa-regular fa-share-from-square"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <?php
+        include("../admin/connect.php");
+        $sql = "SELECT *  FROM the_loai";
+        $theLoai = mysqli_query($conn, $sql);
+        while ($tL = mysqli_fetch_assoc($theLoai)) {
+            ?>
+
+            <div class="title">
+                <p><?php echo $tL['ten_the_loai'] ?></p>
+                <span>
+                    <a href="#"> Xem thêm</a>
+                </span>
+            </div>
+            <?php
+        $sql = "SELECT p.* FROM phim p
+                 JOIN phim_the_loai ptl ON p.id = ptl.phim_id
+                 WHERE ptl.the_loai_id = ".$tL['id'];
+        $movies = mysqli_query($conn, $sql);
+        while ($phim = mysqli_fetch_assoc($movies)) {
+            ?>
+            <div class="movie">
+                <div class="m">
+                    <a href="#"><img src="<?php echo '../admin/'.$phim['poster'] ?>" alt="" style="height: 250px" onclick="chonPhim(1)"></a>
+                    <div class="m1">
+                        <a href="#"><?php echo $phim['ten_phim'] ?></a>
+                    </div>
+                </div>
+            </div>
+            <?php } ?>
+        <?php } ?>
+
+        <div class="title">
+            <p>Danh mục</p>
+        </div>
+
+        <div class="movie">
+            <div class="m">
+                <a href="#"><img src="./img/truyen-hinh.png" alt="" style="height: 100px"></a>
+
+            </div>
+            <div class="m">
+                <a href="#"><img src="./img/truc-tiep.png" alt="" style="height: 100px"></a>
+
+            </div>
+            <div class="m">
+                <a href="#"><img src="./img/phim-bo.png" alt="" style="height: 100px"></a>
+
+            </div>
+            <div class="m">
+                <a href="#"><img src="./img/phim-le.png" alt="" style="height: 100px"></a>
+
+            </div>
+            <div class="m">
+                <a href="#"><img src="./img/the-thao.png" alt="" style="height: 100px"></a>
+
+            </div>
+            <div class="m">
+                <a href="#"><img src="./img/thieu-nhi.png" alt="" style="height: 100px"></a>
+
+            </div>
+        </div>
+        <div>
+            <a href="#"><img src="./img/qc.jpg" alt="" style="width: 100%; margin: 20px 0 50px 0"></a>
+        </div>
+
+    </main>
+    <footer>
+        <div class="footer-top">
+            <div class="ft1">
+                <ul>
+                    <li>
+                        <img src="./img/logo.png" alt="" style="height: 50px;">
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/Bo-cong-thuong.png" alt="" style="height: 38px;"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/_dmca_premi_badge_4.png" alt="" style="width: 125px"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="ft1">
+                <div>
+                    <p>
+                        Về FPT Play
+                    </p>
+                </div>
+                <ul>
+                    <li>
+                        <a href="#">Giới thiệu</a>
+                    </li>
+                    <li>
+                        <a href="#">Các gói dịch vụ</a>
+                    </li>
+                    <li>
+                        <a href="#">Liên hệ</a>
+                    </li>
+                    <li>
+                        <a href="#">Trung tâm hỗ trợ</a>
+                    </li>
+                    <li>
+                        <a href="#">Thông tin</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="ft1">
+                <div>
+                    <p>
+                        Dịch vụ
+                    </p>
+                    <ul>
+                        <li>
+                            <a href="#">Gói DATA</a>
+                        </li>
+                        <li>
+                            <a href="#">Quảng cáo</a>
+                        </li>
+                        <li>
+                            <a href="#">Mua gói</a>
+                        </li>
+                        <li>
+                            <a href="#">Bảo hành</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ft1">
+                <div>
+                    <p>
+                        Quy định
+                    </p>
+                    <ul>
+                        <li>
+                            <a href="#">Điều khoản sử dụng</a>
+                        </li>
+                        <li>
+                            <a href="#">Chính sách thanh toán</a>
+                        </li>
+                        <li>
+                            <a href="#">Chính sách bảo mật thông tin dữ liệu</a>
+                        </li>
+                        <li>
+                            <a href="#">Cam kết của FPT Telecom</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ft1">
+                <div>
+                    <p><br></p>
+                </div>
+                <ul>
+                    <li><i class="fa-sharp fa-solid fa-phone"></i> 19006600</li>
+                    <li>
+                        <div style="width: 150px;">
+                            <i class="fa-sharp fa-regular fa-envelope"></i> hotrofptplay@fpt.com
+                        </div>
+                    </li>
+                    <li>Theo dõi chúng tôi trên</li>
+                    <li class="social"> <a href="#"><i class="fa-brands fa-facebook"></i></a> <a href="#"><i
+                                class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bot">
+            <div class="ft2">Người đại diện: Ông
+                Hoàng Việt Anh<br> Trụ sở: Tầng 8, tòa nhà FPT Tower, số 10 Phạm Văn Bạch, Cầu Giấy, Hà Nội<br> Số giấy
+                chứng nhận đăng ký kinh doanh: 0101778163 do Sở Kế Hoạch Đầu Tư Thành Phố Hà Nội cấp vào ngày
+                28/07/2005<br> Giấy phép Cung cấp Dịch vụ Phát thanh, Truyền hình trên mạng Internet số 377/GP-BTTTT cấp
+                ngày 10/10/2023.</div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -36,7 +36,7 @@
     $phim = mysqli_fetch_assoc($result);
     ?>
     <div class="container">
-        <form action="index.php?page_layout=capnhatphim&id=<?php echo $phim["id"] ?>" method="post">
+        <form action="index.php?page_layout=capnhatphim&id=<?php echo $phim["id"] ?>" method="post" enctype="multipart/form-data">
             <h1>Cập nhật phim</h1>
             <div>
                 <input type="text" name="ten-phim" placeholder="Tên phim" value="<?php echo $phim['ten_phim'] ?>">
